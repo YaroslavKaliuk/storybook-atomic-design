@@ -1,0 +1,85 @@
+/* .privateMessage
+-------------------------------------------------------------*/
+$r: '.privateMessage';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  background-color: var(--blue-20);
+
+  &:has(input:checked) {
+    #{$r}__main {
+      grid-template-rows: 1fr;
+      padding-bottom: 1rem;
+    }
+
+    #{$r}__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__header {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    color: var(--grey-100);
+  }
+
+  &__avatar {
+    flex: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+    border-radius: 100%;
+  }
+
+  &__title {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: inherit;
+  }
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    color: inherit;
+    font-size: 0.75rem;
+    pointer-events: none;
+    transition: transform 0.3s;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  &__content {
+    min-height: 0;
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='secondary']) {
+    background-color: var(--grey-100);
+
+    #{$r}__header {
+      color: var(--grey-60);
+    }
+
+    #{$r}__content {
+      color: var(--white);
+    }
+  }
+}

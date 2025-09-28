@@ -1,0 +1,159 @@
+/* .input
+-------------------------------------------------------------*/
+$r: '.input';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  cursor: text;
+  position: relative;
+
+  &:has(:disabled) {
+    cursor: not-allowed;
+    #{$r}__wrapper {
+      background-color: var(--grey-20);
+      box-shadow: 0 0 0 0.0625rem var(--grey-20);
+    }
+  }
+
+  &:has(#{$r}__title) {
+    #{$r}__type {
+      padding-top: 0.5rem;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__wrapper {
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    border-radius: var(--radius-md);
+    transition: color 0.3s, box-shadow 0.3s, background-color 0.3s;
+
+    &:focus-within {
+      box-shadow: 0 0 0 0.0625rem var(--blue-60);
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+  }
+
+  &__type {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 1rem;
+    padding-inline: 1rem;
+
+    &::placeholder {
+      color: var(--grey-80);
+    }
+
+    &:focus,
+    &:-webkit-autofill,
+    &:not(:placeholder-shown) {
+      ~ #{$r}__title {
+        transform: scale(0.8) translateY(-25%);
+      }
+    }
+
+    &:-webkit-autofill {
+      transition: background-color 0s 600000s, color 0s 600000s;
+    }
+
+    &[type='password'] {
+      font-size: 1rem;
+      letter-spacing: 0.25rem;
+      font-family: Verdana, sans-serif;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-100);
+    font-size: 1.125rem;
+
+    &Left {
+      padding-left: 1rem;
+      pointer-events: none;
+    }
+
+    &Right {
+      padding-right: 1rem;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--grey-80);
+    inset: 0 1rem;
+    position: absolute;
+    pointer-events: none;
+    transform-origin: left top;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  &__error {
+    order: 1;
+    color: var(--red-60);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding-inline: 1rem;
+
+    ~ #{$r}__wrapper {
+      box-shadow: 0 0 0 0.0625rem var(--red-60);
+    }
+  }
+
+  &__maxLength {
+    right: 1rem;
+    bottom: 0.25rem;
+    color: var(--grey-80);
+    line-height: 1;
+    font-size: 0.625rem;
+    font-weight: 500;
+    position: absolute;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='sm']) {
+    #{$r}__type {
+      min-height: 3rem;
+    }
+  }
+
+  &:where([class*='md']) {
+    #{$r}__type {
+      min-height: 3.5rem;
+    }
+  }
+
+  &:where([class*='primary']) {
+    #{$r}__wrapper:not(:has(:disabled)) {
+      background-color: var(--white);
+    }
+  }
+
+  &:where([class*='secondary']) {
+    #{$r}__wrapper:not(:has(:disabled)) {
+      background-color: var(--blue-8);
+    }
+  }
+}

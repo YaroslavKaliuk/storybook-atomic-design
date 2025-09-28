@@ -1,0 +1,61 @@
+/* .app
+-------------------------------------------------------------*/
+$r: '.app';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  position: fixed;
+  z-index: var(--z-index-max);
+
+  &:hover {
+    #{$r}__appBar {
+      transform: translateY(-100%);
+    }
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__appBar {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: var(--z-index-10000);
+    transition: transform 0.3s;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='outlook']),
+  &:where([class*='webBased']) {
+    inset: 0;
+  }
+
+  &:where([class*='extension']) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: var(--extension-width);
+    max-width: var(--extension-width);
+    min-height: var(--extension-height);
+    max-height: var(--extension-height);
+    box-shadow: var(--box-shadow-xl);
+    border-radius: var(--radius-lg);
+  }
+
+  &:where([class*='expanded']) {
+    inset: 4rem;
+    margin: auto;
+    max-width: var(--expanded-width);
+    box-shadow: var(--box-shadow-xl);
+    border-bottom-left-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+
+    #{$r}__appBar {
+      width: 100%;
+      transform: translateY(-100%);
+    }
+  }
+}

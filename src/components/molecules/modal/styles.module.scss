@@ -1,0 +1,156 @@
+/* .modal
+-------------------------------------------------------------*/
+$r: '.modal';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  z-index: var(--z-index-max);
+  position: absolute;
+  background-color: var(--transp-grey-100-32);
+  animation: var(--animation-fadeIn);
+
+  &[data-close] {
+    animation: var(--animation-fadeOut) forwards;
+
+    #{$r}__body {
+      animation: var(--animation-zoomOut) forwards;
+    }
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: min(calc(100% - 2rem), 26rem);
+    max-height: calc(100% - 2rem);
+    margin: auto;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background-color: var(--white);
+    box-shadow: var(--shadow-lg);
+    animation: var(--animation-zoomIn) forwards;
+  }
+
+  &__header {
+    gap: 1rem;
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+    padding: 1rem;
+    position: sticky;
+    z-index: var(--z-index-1);
+    background-color: var(--white);
+    border-bottom: 0.0625rem solid var(--grey-40);
+
+    &:has(#{$r}__close) {
+      padding-inline: 2.5rem;
+      justify-content: center;
+    }
+  }
+
+  &__main {
+    flex-grow: 1;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden auto;
+    overscroll-behavior-y: none;
+  }
+
+  &__footer {
+    gap: 1rem;
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    bottom: 0;
+    padding: 1rem;
+    position: sticky;
+    z-index: var(--z-index-1);
+    background-color: var(--white);
+    border-top: 0.0625rem solid var(--grey-40);
+  }
+
+  &__button {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.0719rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+
+    &Primary {
+      color: var(--grey-80);
+
+      &:hover {
+        color: var(--grey-100);
+      }
+    }
+
+    &Special {
+      color: var(--red-60);
+
+      &:hover {
+        color: var(--red-80);
+      }
+    }
+
+    &Secondary {
+      color: var(--yellow-80);
+
+      &:hover {
+        color: var(--yellow-100);
+      }
+    }
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    padding-right: 1rem;
+    color: var(--grey-100);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='sm']) {
+    #{$r}__body {
+      width: min(calc(100% - 2rem), 18rem);
+    }
+  }
+
+  &:where([class*='md']) {
+    #{$r}__body {
+      width: min(calc(100% - 2rem), 26rem);
+    }
+  }
+
+  &:where([class*='lg']) {
+    #{$r}__body {
+      width: min(calc(100% - 2rem), 32rem);
+    }
+  }
+
+  &:where([class*='xl']) {
+    #{$r}__body {
+      width: min(calc(100% - 2rem), 40rem);
+    }
+  }
+}

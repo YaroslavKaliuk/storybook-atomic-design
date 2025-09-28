@@ -1,0 +1,43 @@
+/* .notificationList
+-------------------------------------------------------------*/
+$r: '.notificationList';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  flex-direction: column;
+
+  // element
+  //---------------------------------------------------------
+  &__item {
+    padding-top: 2rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      left: 4rem;
+      right: 0;
+      height: 0.0625rem;
+      background-color: var(--grey-40);
+    }
+
+    &:first-of-type {
+      padding-top: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__empty {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

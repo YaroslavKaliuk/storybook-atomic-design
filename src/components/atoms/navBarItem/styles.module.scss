@@ -1,0 +1,55 @@
+/* .navBarItem
+-------------------------------------------------------------*/
+$r: '.navBarItem';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 0.25rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 5rem;
+
+  &__active,
+  &:hover:not(:disabled) {
+    #{$r}__icon {
+      background-color: var(--blue-20);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    max-width: 4rem;
+    min-width: 4rem;
+    font-size: 1.125rem;
+    border-radius: 100vw;
+    background-color: var(--white);
+    transition: background-color 0.2s;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1rem;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

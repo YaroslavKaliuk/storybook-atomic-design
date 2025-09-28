@@ -1,0 +1,38 @@
+/* .paperStatus
+-------------------------------------------------------------*/
+$r: '.paperStatus';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+
+  // element
+  //---------------------------------------------------------
+  &__item {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.75rem;
+    height: 0.75rem;
+    color: var(--white);
+    font-size: 0.5rem;
+    padding: 0.125rem;
+    border-radius: 100%;
+    background-color: var(--white);
+    border: 0.0625rem solid var(--grey-60);
+
+    &:has(svg) {
+      border-color: var(--white);
+      background-color: var(--teal-80);
+    }
+
+    & + & {
+      transform: translateX(-30%);
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

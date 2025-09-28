@@ -1,0 +1,55 @@
+/* .link
+-------------------------------------------------------------*/
+$r: '.link';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  transition: color 0.3s;
+
+  // element
+  //---------------------------------------------------------
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='primary']) {
+    color: var(--blue-60);
+    font-size: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 0.125rem;
+
+    @media (pointer: fine) {
+      &:not(:disabled):hover,
+      &:not(:disabled):focus-visible {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &:where([class*='secondary']) {
+    color: var(--blue-100);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media (pointer: fine) {
+      &:not(:disabled):hover,
+      &:not(:disabled):focus-visible {
+        color: var(--blue-80);
+      }
+    }
+  }
+
+  &:where([class*='special']) {
+    color: var(--yellow-80);
+    font-size: 1rem;
+    font-weight: 600;
+
+    @media (pointer: fine) {
+      &:not(:disabled):hover,
+      &:not(:disabled):focus-visible {
+        color: var(--yellow-100);
+      }
+    }
+  }
+}

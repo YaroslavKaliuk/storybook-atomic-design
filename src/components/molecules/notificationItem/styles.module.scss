@@ -1,0 +1,54 @@
+/* .notificationItem
+-------------------------------------------------------------*/
+$r: '.notificationItem';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+
+  // element
+  //---------------------------------------------------------
+  &__avatar {
+    display: flex;
+    align-self: baseline;
+  }
+
+  &__content {
+    gap: 0.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    column-gap: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+
+  &__userName {
+    font-weight: 500;
+  }
+
+  &__fileName {
+    text-align: left;
+    word-break: break-all;
+    text-decoration: underline;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--grey-100);
+    }
+  }
+
+  &__time {
+    color: var(--grey-100);
+    font-size: 0.75rem;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

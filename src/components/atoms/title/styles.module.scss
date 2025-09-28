@@ -1,0 +1,33 @@
+/* .title
+-------------------------------------------------------------*/
+$r: '.title';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  min-width: 0;
+  font-weight: 500;
+
+  // element
+  //---------------------------------------------------------
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='sm']) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  &:where([class*='md']) {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  &:where([class*='outlook']),
+  &:where([class*='extension']) {
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center;
+  }
+}

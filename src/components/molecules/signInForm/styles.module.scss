@@ -1,0 +1,35 @@
+/* .signInForm
+-------------------------------------------------------------*/
+$r: '.signInForm';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  // element
+  //---------------------------------------------------------
+  &__fields {
+    gap: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__forgotPassword {
+    align-self: flex-start;
+    color: var(--grey-100);
+    padding-inline: 1rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: currentColor;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

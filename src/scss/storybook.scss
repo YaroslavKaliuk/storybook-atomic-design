@@ -1,0 +1,50 @@
+/* storybook
+-------------------------------------------------------------*/
+.docblock-argstable {
+  [type='radio'] {
+    all: revert;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    margin: 0 0.25rem 0 0;
+  }
+}
+
+[scale='1'] {
+  display: contents !important;
+
+  *:where(:not([data-name] *)) {
+    display: contents !important;
+  }
+}
+
+#storybook-root [data-id-component='app'][class*='outlook'] {
+  width: var(--outlook-min-width);
+  min-width: var(--outlook-min-width);
+  max-width: var(--outlook-max-width);
+  height: calc(100vh - 8rem);
+  min-height: 50vh;
+  margin: auto;
+  resize: both;
+  overflow: auto;
+  transition: overflow 0s;
+  box-shadow: 0rem 0rem 0.125rem 0rem var(--transp-black-25);
+
+  &::after {
+    content: '';
+    right: 0;
+    bottom: 0;
+    width: 1rem;
+    height: 1rem;
+    z-index: var(--z-index-max);
+    position: absolute;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      135deg,
+      currentColor,
+      currentColor 0.125rem,
+      transparent 0.125rem,
+      transparent 0.25rem
+    );
+  }
+}

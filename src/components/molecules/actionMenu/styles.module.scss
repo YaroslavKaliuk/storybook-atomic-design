@@ -1,0 +1,48 @@
+/* .actionMenu
+-------------------------------------------------------------*/
+$r: '.actionMenu';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  flex-direction: column;
+
+  // element
+  //---------------------------------------------------------
+  &__item {
+    &:first-child {
+      border-bottom: 0.0625rem solid var(--grey-40);
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+
+      #{$r}__icon {
+        color: var(--teal-80);
+      }
+    }
+
+    &:last-child {
+      color: var(--red-60);
+      border-top: 0.0625rem solid var(--grey-40);
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+    }
+  }
+
+  &__icon {
+    [data-icon='IconMonoTimeline'] {
+      width: calc(183.3em / 100);
+      font-size: 0.75rem;
+    }
+
+    [data-icon='IconMonoAddUser'] {
+      width: calc(22em / 16);
+      font-size: 1rem;
+    }
+
+    [data-icon='IconMonoTag'] {
+      font-size: 1rem;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

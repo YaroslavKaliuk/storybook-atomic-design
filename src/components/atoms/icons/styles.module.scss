@@ -1,0 +1,78 @@
+/* .icon
+-------------------------------------------------------------*/
+$r: '.icon';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  // element
+  //---------------------------------------------------------
+  section {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  &__list {
+    counter-reset: list-counter;
+    gap: 0.5rem;
+    display: grid;
+    grid-auto-rows: 7rem;
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    width: 100%;
+    max-width: 75rem;
+  }
+
+  &__item {
+    counter-increment: list-counter;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--radius-md);
+    border: 0.0625rem solid var(--grey-20);
+    transition: border-color 0.3s;
+
+    &::before {
+      content: counter(list-counter) '. ';
+      top: 0.5rem;
+      left: 0.5rem;
+      color: var(--grey-80);
+      font-size: 0.5625rem;
+      position: absolute;
+    }
+
+    &:hover {
+      border-color: var(--grey-80);
+    }
+  }
+
+  &__svg {
+    display: grid;
+    place-items: center;
+    font-size: 2.5rem;
+  }
+
+  &__name {
+    display: grid;
+    place-items: center;
+    padding: 0.25rem;
+    font-size: 0.5rem;
+    text-align: center;
+    word-break: break-all;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    background-color: var(--grey-8);
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

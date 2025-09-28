@@ -1,0 +1,145 @@
+/* vars
+-------------------------------------------------------------*/
+:root {
+  // breakpoints
+  --mobile-small: 23.4375rem; // 375px
+  --mobile: 40rem; // 640px
+  --tablet: 48rem; // 768px
+  --laptop: 64rem; // 1024px
+  --desktop: 80rem; // 1280px
+
+  // app sizes
+  --extension-width: 22.5rem; // 360px
+  --extension-height: 47.5rem; // 760px
+  --expanded-width: 80rem; // 1280px
+  --outlook-min-width: 20rem; // 320px
+  --outlook-max-width: 40rem; // 640px
+
+  // sizes
+  --container-sm: 30rem; // 480px
+
+  // fonts
+  --font-sans: 'SFProDisplay', ui-sans-serif, system-ui, sans-serif;
+
+  // radius
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+
+  // shadows
+  --shadow-md: 0rem 0.125rem 0.125rem 0rem var(--transp-black-25);
+  --shadow-lg: 0 0.6875rem 0.9375rem -0.4375rem var(--transp-black-20),
+    0 0.5625rem 2.875rem 0.5rem var(--transp-black-12),
+    0 1.5rem 2.375rem 0.1875rem var(--transp-black-14);
+  --box-shadow-xl: 0 0 1.5rem rgba(228, 182, 44, 0.5);
+
+  // z-index
+  --z-hidden: -1;
+  --z-auto: auto;
+  --z-index-0: 0;
+  --z-index-1: 1;
+  --z-index-10: 10;
+  --z-index-100: 100;
+  --z-index-1000: 1000;
+  --z-index-10000: 10000;
+  --z-index-max: 2147483647;
+
+  // colors
+  --primary: #ff7f00;
+
+  --white: #ffffff;
+  --black: #212121;
+
+  --red-60: #d32f2f;
+  --red-80: #ba2323;
+
+  --teal-60: #29cb97;
+  --teal-80: #3b9a9b;
+
+  --grey-8: #f5f5f5;
+  --grey-20: #e5e8ec;
+  --grey-40: #dcdcdc;
+  --grey-60: #c6c6c6;
+  --grey-80: #8d8d8d;
+  --grey-100: #616264;
+
+  --blue-8: #f4f7fb;
+  --blue-20: #e1ebf9;
+  --blue-40: #cbd4e1;
+  --blue-60: #3a7dea;
+  --blue-80: #415367;
+  --blue-100: #324151;
+
+  --yellow-8: #fdfaed;
+  --yellow-20: #e5e3d7;
+  --yellow-40: #e9d95f;
+  --yellow-60: #dccb4e;
+  --yellow-80: #c3af64;
+  --yellow-100: #867657;
+
+  --transp-blue-60-20: rgba(58, 125, 234, 0.2);
+  --transp-grey-100-32: rgba(97, 98, 100, 0.32);
+  --transp-grey-100-80: rgba(97, 98, 100, 0.8);
+
+  --transp-black-12: rgba(33, 33, 33, 0.12);
+  --transp-black-14: rgba(33, 33, 33, 0.14);
+  --transp-black-20: rgba(33, 33, 33, 0.2);
+  --transp-black-25: rgba(33, 33, 33, 0.25);
+
+  // gradients
+  --gradient-blue-1: linear-gradient(359.84deg, #8db9ff 0.14%, #d6e1ff 99.86%);
+  --gradient-blue-2: linear-gradient(0.26deg, #c1d5ff 0.23%, #98b2fa 99.77%);
+
+  // animations
+  --animation-fadeIn: fadeIn 0.3s;
+  --animation-fadeOut: fadeOut 0.3s;
+  --animation-zoomIn: zoomIn 0.3s;
+  --animation-zoomOut: zoomOut 0.3s;
+  --animation-dropdown: showDropdown 0.3s;
+  --animation-rotate: rotate 2s linear infinite;
+  --animation-stroke: stroke 1.3s ease-in-out infinite;
+
+  .digitrack {
+    // fonts
+    --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+
+    // colors
+    --primary: #009edb;
+
+    --white: #ffffff;
+    --black: #1d1d1b;
+
+    --red-60: #e74010;
+    --red-80: #ae300d;
+
+    --teal-60: #91d584;
+    --teal-80: #3b842d;
+
+    --grey-8: #f5f5f5;
+    --grey-20: #e5e8ec;
+    --grey-40: #dcdcdc;
+    --grey-60: #c6c6c6;
+    --grey-80: #8d8d8d;
+    --grey-100: #616264;
+
+    --blue-8: #e2eef9;
+    --blue-20: #c3def2;
+    --blue-60: #006cb5;
+    --blue-80: #204184;
+    --blue-100: #204184;
+
+    --yellow-8: #ffffff;
+    --yellow-20: #f5f5f5;
+    --yellow-40: #68acdf;
+    --yellow-60: #2c86ca;
+    --yellow-80: #2c86ca;
+    --yellow-100: #1e5988;
+
+    --transp-blue-60-20: rgba(0, 108, 181, 0.2);
+    --transp-grey-100-32: rgba(97, 98, 100, 0.32);
+    --transp-grey-100-80: rgba(97, 98, 100, 0.8);
+
+    // gradients
+    --gradient-blue-1: #006cb5;
+    --gradient-blue-2: #009edb;
+  }
+}

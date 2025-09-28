@@ -1,0 +1,25 @@
+/* .navBar
+-------------------------------------------------------------*/
+$r: '.navBar';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+
+  // element
+  //---------------------------------------------------------
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='webBased']),
+  &:where([class*='expanded']) {
+    flex-direction: column;
+  }
+
+  &:where([class*='outlook']),
+  &:where([class*='extension']) {
+    box-shadow: var(--shadow-lg);
+    background-color: var(--white);
+  }
+}

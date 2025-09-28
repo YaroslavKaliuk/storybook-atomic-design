@@ -1,0 +1,46 @@
+/* .copyLinkS
+-------------------------------------------------------------*/
+$r: '.copyLink';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  height: 3.5rem;
+  max-width: fit-content;
+  cursor: pointer;
+  color: var(--blue-60);
+  padding-inline: 1rem;
+  border-radius: var(--radius-md);
+  background-color: var(--blue-20);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--blue-40);
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+
+    svg {
+      width: 0.864em;
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

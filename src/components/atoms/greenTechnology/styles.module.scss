@@ -1,0 +1,31 @@
+/* .greenTechnology
+-------------------------------------------------------------*/
+$r: '.greenTechnology';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+
+  // element
+  //---------------------------------------------------------
+  &__icon {
+    display: flex;
+    font-size: 2rem;
+    color: var(--teal-80);
+  }
+
+  &__title {
+    color: var(--grey-100);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    white-space: pre-line;
+    text-transform: uppercase;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

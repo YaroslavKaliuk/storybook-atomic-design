@@ -1,0 +1,79 @@
+/* .paperItem
+-------------------------------------------------------------*/
+$r: '.paperItem';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 0.5rem;
+  display: grid;
+  grid-template-rows: 2rem 1fr 2.5rem;
+  width: 156px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--grey-20);
+
+  // element
+  //---------------------------------------------------------
+  &__top {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding: 0.5rem;
+    padding-bottom: 0;
+  }
+
+  &__content {
+    gap: 0.25rem;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 24px 16px 16px 24px;
+    min-width: 0;
+    padding-inline: 0.5rem;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding-inline: 0.5rem;
+    background-color: var(--white);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+
+  &__title {
+    display: flex;
+    min-width: 0;
+    line-height: 1;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &Truncated {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__ownerName,
+  &__createdDate {
+    line-height: 1;
+    font-size: 0.75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__ownerName {
+    font-weight: 500;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='primary']) {
+    background-color: var(--yellow-8);
+  }
+
+  &:where([class*='secondary']) {
+    background-color: var(--blue-20);
+  }
+}

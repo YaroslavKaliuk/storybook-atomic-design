@@ -1,0 +1,40 @@
+/* .loader
+-------------------------------------------------------------*/
+$r: '.loader';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  z-index: var(--z-index-1000);
+  padding: 0.25rem;
+  position: absolute;
+  background-color: var(--white);
+  animation: var(--animation-fadeIn);
+
+  // element
+  //---------------------------------------------------------
+  svg {
+    width: 100%;
+    height: 100%;
+    max-width: 6rem;
+    max-height: 6rem;
+    transform-origin: center center;
+    animation: var(--animation-rotate);
+
+    circle {
+      stroke: var(--blue-80);
+      stroke-width: 0.125rem;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      stroke-dasharray: 1, 200;
+      animation: var(--animation-stroke);
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

@@ -1,0 +1,26 @@
+/* .backButton
+-------------------------------------------------------------*/
+$r: '.backButton';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--grey-100);
+  font-size: 1rem;
+  transition: color 0.2s;
+
+  &:hover {
+    color: currentColor;
+  }
+
+  // element
+  //---------------------------------------------------------
+
+  // modifier
+  //---------------------------------------------------------
+}

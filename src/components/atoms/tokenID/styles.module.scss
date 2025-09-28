@@ -1,0 +1,49 @@
+/* .tokenID
+-------------------------------------------------------------*/
+$r: '.tokenID';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  min-width: 0;
+  max-width: 100%;
+  padding-inline: 0.25rem;
+  border-radius: var(--radius-md);
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__icon {
+    flex: none;
+    display: flex;
+    font-size: 0.875rem;
+  }
+
+  &__id {
+    line-height: 1;
+    font-weight: 500;
+    font-size: 0.625rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='primary']) {
+    background-color: var(--yellow-20);
+  }
+
+  &:where([class*='secondary']) {
+    background-color: var(--white);
+  }
+}

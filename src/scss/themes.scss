@@ -1,0 +1,13 @@
+/* themes
+-------------------------------------------------------------*/
+[data-theme='documentgps'] {
+  [data-theme='digitrack'] {
+    display: none !important;
+  }
+}
+
+[data-theme='digitrack'] {
+  [data-theme='documentgps'] {
+    display: none !important;
+  }
+}

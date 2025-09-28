@@ -1,0 +1,27 @@
+/* .footer
+-------------------------------------------------------------*/
+$r: '.footer';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  background-color: var(--white);
+
+  // element
+  //---------------------------------------------------------
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='webBased']),
+  &:where([class*='expanded']) {
+    grid-row: 2;
+    padding-block: 0.5rem 2rem;
+  }
+
+  &:where([class*='outlook']),
+  &:where([class*='extension']) {
+    bottom: 0;
+    position: static;
+    z-index: var(--z-index-10000);
+  }
+}

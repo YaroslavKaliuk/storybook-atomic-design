@@ -1,0 +1,41 @@
+/* .gpsStatusList
+-------------------------------------------------------------*/
+$r: '.gpsStatusList';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  // element
+  //---------------------------------------------------------
+  &__title {
+    word-break: break-all;
+  }
+
+  &__content {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__date {
+    color: var(--grey-100);
+    font-size: 0.875rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__empty {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

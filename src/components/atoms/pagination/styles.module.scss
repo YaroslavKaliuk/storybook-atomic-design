@@ -1,0 +1,116 @@
+/* .pagination
+-------------------------------------------------------------*/
+$r: '.pagination';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+
+  // element
+  //---------------------------------------------------------
+  &__button {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.25rem;
+    min-width: 4rem;
+    padding-inline: 1.5rem;
+    border: 1px solid var(--grey-60);
+    border-radius: var(--radius-md);
+    transition: border-color 0.3s;
+
+    @media (pointer: fine) {
+      &:not(:disabled):hover,
+      &:not(:disabled):focus-visible {
+        border-color: var(--blue-60);
+      }
+    }
+
+    &Text {
+      font-size: 1rem;
+      line-height: 1;
+      font-weight: 500;
+      user-select: none;
+      letter-spacing: 0.075rem;
+      text-transform: uppercase;
+    }
+
+    #{$r}__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      width: 0.6em;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__list {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__dots,
+  &__page {
+    display: grid;
+    place-content: center;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    color: var(--grey-80);
+    font-weight: 600;
+    transition: color 0.3s;
+
+    &:not(:disabled):not(#{$r}__dots) {
+      @media (pointer: fine) {
+        &:hover,
+        &:focus-visible {
+          color: var(--black);
+        }
+      }
+    }
+
+    &Active {
+      color: var(--black);
+      cursor: not-allowed;
+    }
+  }
+
+  &__dots {
+    cursor: default;
+  }
+
+  &__count {
+    gap: 0.5rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+    user-select: none;
+
+    b {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1rem;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='lg']) {
+    #{$r}__button {
+      height: 3.25rem;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+/* .tooltip
+-------------------------------------------------------------*/
+$r: '.tooltip';
+$r-data: '[data-tooltip]';
+
+// mixins
+//-----------------------------------------------------------
+@mixin tooltip-position(
+  $placement,
+  $css-property,
+  $transform-origin,
+  $transform,
+  $align-property,
+  $align-value
+) {
+  &[data-tooltip-placement='#{$placement}'] {
+    &::before {
+      #{$align-property}: #{$align-value};
+      #{$css-property}: calc(100% + 0.25rem);
+      transform-origin: #{$transform-origin};
+      transform: scale(0) #{$transform};
+    }
+
+    &:hover::before {
+      transform: scale(1) #{$transform};
+    }
+  }
+}
+
+@mixin tooltip-side-position(
+  $placement,
+  $css-property,
+  $align-property,
+  $align-value,
+  $transform-origin,
+  $transform
+) {
+  &[data-tooltip-placement='#{$placement}'] {
+    &::before {
+      #{$align-property}: #{$align-value};
+      #{$css-property}: calc(100% + 0.25rem);
+      transform-origin: #{$transform-origin};
+      transform: scale(0) #{$transform};
+    }
+
+    &:hover::before {
+      transform: scale(1) #{$transform};
+    }
+  }
+}
+
+// block
+//-----------------------------------------------------------
+#{$r},
+#{$r-data} {
+  position: relative;
+
+  // element
+  //---------------------------------------------------------
+  &::before {
+    all: unset;
+    color: initial;
+    text-shadow: none;
+    text-align: initial;
+    text-indent: initial;
+    text-transform: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    direction: initial;
+    unicode-bidi: normal;
+    visibility: visible;
+    list-style: none;
+    box-sizing: border-box;
+
+    content: attr(data-tooltip);
+    width: fit-content;
+    min-height: 1.5rem;
+    z-index: var(--z-index-max);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    white-space: nowrap;
+    pointer-events: none;
+    background-color: var(--grey-80);
+    border-radius: var(--radius-md);
+    transition: opacity 0.2s, transform 0.2s;
+    opacity: 0;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &[data-tooltip-long]::before {
+    max-width: 15rem;
+    min-width: 15rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  // Top positions
+  @include tooltip-position('top', 'bottom', 'bottom left', 'translateX(-50%)', 'left', '50%');
+  @include tooltip-side-position('topStart', 'bottom', 'left', '0', 'bottom left', 'translateX(0)');
+  @include tooltip-side-position('topEnd', 'bottom', 'right', '0', 'bottom right', 'translateX(0)');
+
+  // Bottom positions
+  @include tooltip-position('bottom', 'top', 'top left', 'translateX(-50%)', 'left', '50%');
+  @include tooltip-side-position('bottomStart', 'top', 'left', '0', 'top left', 'translateX(0)');
+  @include tooltip-side-position('bottomEnd', 'top', 'right', '0', 'top right', 'translateX(0)');
+
+  // Left positions
+  @include tooltip-position('left', 'right', 'center right', 'translateY(-50%)', 'top', '50%');
+  @include tooltip-side-position('leftStart', 'right', 'top', '0', 'top right', 'translateY(0)');
+  @include tooltip-side-position(
+    'leftEnd',
+    'right',
+    'bottom',
+    '0',
+    'bottom right',
+    'translateY(0)'
+  );
+
+  // Right positions
+  @include tooltip-position('right', 'left', 'center left', 'translateY(-50%)', 'top', '50%');
+  @include tooltip-side-position('rightStart', 'left', 'top', '0', 'top left', 'translateY(0)');
+  @include tooltip-side-position('rightEnd', 'left', 'bottom', '0', 'bottom left', 'translateY(0)');
+}
+
+#{$r} {
+  display: inline-flex;
+}

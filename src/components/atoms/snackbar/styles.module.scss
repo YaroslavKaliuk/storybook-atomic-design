@@ -1,0 +1,60 @@
+/* .snackbar
+-------------------------------------------------------------*/
+$r: '.snackbar';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 22.5rem;
+  max-width: 22.5rem;
+  min-height: 3.5rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  animation: var(--animation-fadeIn);
+
+  // element
+  //---------------------------------------------------------
+  &__message {
+    flex-grow: 1;
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  &__button {
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='primary']) {
+    background-color: var(--black);
+
+    #{$r}__button {
+      color: var(--yellow-80);
+    }
+  }
+
+  &:where([class*='special']) {
+    background-color: var(--red-60);
+
+    #{$r}__button {
+      color: var(--white);
+    }
+  }
+
+  &:where([class*='secondary']) {
+    background-color: var(--teal-60);
+
+    #{$r}__button {
+      color: var(--white);
+    }
+  }
+}

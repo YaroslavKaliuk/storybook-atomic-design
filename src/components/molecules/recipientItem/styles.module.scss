@@ -1,0 +1,66 @@
+/* .recipientItem
+-------------------------------------------------------------*/
+$r: '.recipientItem';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background-color: var(--white);
+  border: 0.0625rem solid var(--grey-40);
+
+  // element
+  //---------------------------------------------------------
+  &__avatar {
+    display: flex;
+  }
+
+  &__email {
+    flex-grow: 1;
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__actions {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+
+    @container (min-width: 40rem) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__button {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      flex-shrink: 0;
+      font-size: 1.125rem;
+    }
+
+    &Text {
+      display: none;
+      font-size: 1rem;
+
+      @container (min-width: 40rem) {
+        display: flex;
+      }
+    }
+
+    &Delete {
+      color: var(--red-60);
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

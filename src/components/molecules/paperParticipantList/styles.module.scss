@@ -1,0 +1,67 @@
+/* .paperParticipantList
+-------------------------------------------------------------*/
+$r: '.paperParticipantList';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  flex-grow: 1;
+  display: grid;
+  align-items: center;
+
+  // element
+  //---------------------------------------------------------
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: default;
+    position: relative;
+  }
+
+  &__avatar {
+    border-color: var(--teal-80);
+  }
+
+  &__status {
+    bottom: 0;
+    left: 0.75rem;
+    z-index: var(--z-index-1);
+    position: absolute;
+
+    &:has(:only-child) {
+      transform: translate(25%, 25%);
+    }
+
+    &:has(:first-child:nth-last-child(2)) {
+      transform: translate(-20%, 25%);
+    }
+  }
+
+  &__count {
+    display: flex;
+    cursor: default;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-left: 0.25rem;
+
+    &[data-tooltip]::before {
+      bottom: 100%;
+      overflow: auto;
+      max-height: 6rem;
+      max-width: 8rem;
+      min-width: unset;
+      width: max-content;
+      pointer-events: all;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='grid']) {
+    grid-template-columns: repeat(4, 1fr) max-content;
+  }
+
+  &:where([class*='list']) {
+    grid-template-columns: repeat(8, 1fr) max-content;
+  }
+}

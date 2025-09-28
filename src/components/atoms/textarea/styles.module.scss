@@ -1,0 +1,50 @@
+/* .textarea
+-------------------------------------------------------------*/
+$r: '.textarea';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 0.063rem solid var(--blue-8);
+  transition: border-color 0.3s;
+
+  &:focus-within {
+    outline: none;
+    border-color: var(--blue-60);
+  }
+
+  &:has(:disabled) {
+    border-color: var(--grey-20);
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__textarea {
+    flex-grow: 1;
+    padding: 1rem;
+    min-height: 10rem;
+    background-color: var(--blue-8);
+    transition: background-color 0.3s;
+
+    &::placeholder {
+      color: var(--grey-80);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: var(--grey-60);
+      background-color: var(--grey-20);
+
+      &::placeholder {
+        color: var(--grey-60);
+      }
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

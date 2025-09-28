@@ -1,0 +1,60 @@
+/* .page
+-------------------------------------------------------------*/
+$r: '.page';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  flex-grow: 1;
+  overflow: hidden auto;
+  z-index: var(--z-index-max);
+  background-color: var(--blue-8);
+  transform: translateZ(0);
+
+  // element
+  //---------------------------------------------------------
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    width: 0.125rem;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+    height: 0.125rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.125rem;
+    background-color: var(--grey-60);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &:where([class*='webBased']),
+  &:where([class*='expanded']) {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    grid-template-rows: max-content 1fr;
+  }
+
+  &:where([class*='outlook']),
+  &:where([class*='extension']) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:where([class*='extension']) {
+    border-radius: var(--radius-lg);
+  }
+
+  &:where([class*='expanded']) {
+    border-bottom-left-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+  }
+}

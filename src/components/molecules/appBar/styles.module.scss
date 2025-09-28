@@ -1,0 +1,45 @@
+/* .appBar
+-------------------------------------------------------------*/
+$r: '.appBar';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  justify-content: flex-end;
+  height: 2rem;
+  width: calc(100% - 2rem);
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+  background-color: var(--grey-20);
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+
+  // element
+  //---------------------------------------------------------
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    color: var(--grey-100);
+    transition: color 0.3s;
+
+    &Drag {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+
+    &:hover {
+      color: currentColor;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
