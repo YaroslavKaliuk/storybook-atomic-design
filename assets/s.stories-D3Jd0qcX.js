@@ -1,0 +1,25 @@
+import{j as r}from"./jsx-runtime-D_zvdyIk.js";import{c as t}from"./enums-j1G55Avl.js";import{a as g}from"./avatar-BKnVde2b.js";import{P as e}from"./paperParticipantList-CL6EDBBa.js";import"./index-xf0-QVxD.js";import"./_commonjsHelpers-CqkleIqs.js";import"./etag-C4mhMif4.js";import"./IconMonoClose-COlRpOzk.js";import"./index-BKyFwriW.js";import"./link-i8Vdy082.js";import"./logo-CpEpTeSO.js";import"./IconMultiLogoDocumentGPS-ByIKl3WH.js";import"./input-Cb6zUZKs.js";import"./IconMonoVisibilityOff-CrMAnSJv.js";import"./title-DMBq_gjU.js";import"./useAppType-DQSG-477.js";import"./button-Dn6_MprM.js";import"./loader-DjLiw7AR.js";import"./avatar-Dw7VE7nt.js";import"./select-BiNXl3aT.js";import"./IconMonoCaretDown-nbCVVf6N.js";import"./tokenID-BtSuzah3.js";import"./IconMonoKey-genEvUgq.js";import"./tooltip-BZIAJRfH.js";import"./switcher-CYqRQcCk.js";import"./snackbar-3enaQt1z.js";import"./useTranslation-CO63FDpr.js";import"./nonIterableRest-DsePzpQ9.js";import"./textarea-Cxlbd_yw.js";import"./copyLink-BytqdUi0.js";import"./IconMonoCopy-BHCnYk-6.js";import"./envelope-UyDJcHHj.js";import"./IconMultiEnvelope-DJwiFN9O.js";import"./separator-Lc8UIbZS.js";import"./sortButton-DO6JhAAs.js";import"./IconMonoArrowDown-DIN74zz8.js";import"./backButton-I5T8UvXO.js";import"./IconMonoChevronLeft-DNt7JkQa.js";import"./navBarItem-BmhEqPzT.js";import"./paperStatus-Nc_ueS_S.js";import"./IconMonoCheck-BK_tYEQw.js";import"./IconMonoDownload-ChYAXVJF.js";import"./actionMenuItem-D6ZAt_0h.js";import"./copyLinkSecure-DKkeiFSN.js";import"./IconMonoCopyLinkSecure-DMFOQmOk.js";import"./privateMessage-DzZNFr4S.js";import"./IconMonoChevronDown-Cg9ovnWJ.js";import"./greenTechnology-BbfY9D-t.js";import"./IconMonoLeaf-BVG7aNLw.js";import"./actionMenuButton-BDwytS_X.js";import"./IconMonoInlineDots-B8UHOh6O.js";const s=[{avatarImage:g,userInitials:"JD",status:"inactive",userName:"John Doe"},{avatarImage:"",userInitials:"AS",status:"opened",userName:"Alice Smith"},{avatarImage:"",userInitials:"BJ",status:"downloaded",userName:"Bob Johnson"},{avatarImage:"",userInitials:"CW",status:"shared",userName:"Carol Wilson"},{avatarImage:"",userInitials:"DM",status:"shared_downloaded",userName:"1_loremipsumdolorsitamet@gmail.com"},{avatarImage:"",userInitials:"EB",status:"inactive",userName:"2_loremipsumdolorsitamet@gmail.com"},{avatarImage:"",userInitials:"FT",status:"opened",userName:"3_loremipsumdolorsitamet@gmail.com"},{avatarImage:"",userInitials:"GA",status:"downloaded",userName:"4_loremipsumdolorsitamet@gmail.com"},{avatarImage:"",userInitials:"HT",status:"shared",userName:"5_loremipsumdolorsitamet@gmail.com"},{avatarImage:"",userInitials:"IJ",status:"shared_downloaded",userName:"6_loremipsumdolorsitamet@gmail.com"}],cr={title:"Components/Molecules/PaperParticipantList",component:e,parameters:{layout:"centered",docs:{description:{component:'<a href="https://www.figma.com/design/ywExpWsTLdXvZ9ZEelZdAq/Document-GPS---Design-System-1?node-id=738-37318&m=dev" target="_blank"><b>Figma Design</b></a>'}}},tags:["autodocs"],argTypes:{participants:{control:{type:"object"},description:"Array of participants to display",table:{type:{summary:"PaperParticipant[]"}}},libraryView:{control:{type:"radio"},options:[t.grid,t.list],description:"Library view mode determining max displayed users (4 for list view, 8 for grid view)",table:{type:{summary:"UILibraryView"},defaultValue:{summary:"UILibraryView.grid"}}},classes:{control:{type:"object"},description:"Custom classes for styling",table:{type:{summary:'Partial<Record<"root", string>>'}}}},args:{libraryView:t.grid,participants:s,classes:{}}},i={decorators:[(c,u)=>r.jsx("div",{style:{paddingBlock:"6rem",width:u.args.libraryView===t.grid?"9rem":"18rem"},children:r.jsx(c,{})})]},a={render:()=>r.jsxs("div",{style:{gap:"1rem",display:"grid",placeItems:"center"},children:[r.jsx("div",{style:{width:"18rem"},children:r.jsx(e,{participants:s,libraryView:t.list})}),r.jsx("div",{style:{width:"9rem"},children:r.jsx(e,{participants:s,libraryView:t.grid})})]})};var o,m,p;i.parameters={...i.parameters,docs:{...(o=i.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  decorators: [(Story, context) => <div style={{
+    paddingBlock: '6rem',
+    width: context.args.libraryView === UILibraryView.grid ? '9rem' : '18rem'
+  }}>
+        <Story />
+      </div>]
+}`,...(p=(m=i.parameters)==null?void 0:m.docs)==null?void 0:p.source}}};var n,d,l;a.parameters={...a.parameters,docs:{...(n=a.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  render: () => <div style={{
+    gap: '1rem',
+    display: 'grid',
+    placeItems: 'center'
+  }}>
+      <div style={{
+      width: '18rem'
+    }}>
+        <PaperParticipantList participants={mockParticipants} libraryView={UILibraryView.list} />
+      </div>
+      <div style={{
+      width: '9rem'
+    }}>
+        <PaperParticipantList participants={mockParticipants} libraryView={UILibraryView.grid} />
+      </div>
+    </div>
+}`,...(l=(d=a.parameters)==null?void 0:d.docs)==null?void 0:l.source}}};const ur=["Default","AllVariants"];export{a as AllVariants,i as Default,ur as __namedExportsOrder,cr as default};

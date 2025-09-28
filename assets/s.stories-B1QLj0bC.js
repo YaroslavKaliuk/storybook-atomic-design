@@ -1,0 +1,12 @@
+import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{a as t}from"./enums-j1G55Avl.js";import{T as s}from"./tokenID-BtSuzah3.js";import"./index-xf0-QVxD.js";import"./_commonjsHelpers-CqkleIqs.js";import"./IconMonoKey-genEvUgq.js";import"./index-BKyFwriW.js";const x={title:"Components/Atoms/TokenID",component:s,parameters:{layout:"centered",docs:{description:{component:'<a href="https://www.figma.com/design/ywExpWsTLdXvZ9ZEelZdAq/Document-GPS---Design-System-1?node-id=738-37306&t=uVF6yR3ssioD8van-4" target="_blank"><b>Figma Design</b></a>'}}},tags:["autodocs"],argTypes:{color:{control:{type:"radio"},options:[t.primary,t.secondary],description:"Color of the token",table:{type:{summary:"UIColor"},defaultValue:{summary:"UIColor.primary"}}},tokenId:{control:{type:"text"},description:"Token identifier string",table:{type:{summary:"string"}}},onClick:{action:"clicked",description:"Function called when token is clicked",table:{type:{summary:"() => void"}}},classes:{control:{type:"object"},description:"Classes to apply to the token elements",table:{type:{summary:"Partial<Record<'root' | 'icon' | 'id', string>>"}}}},args:{color:t.primary,tokenId:"688b6af354ed77c0b006ff8d",onClick:()=>{},classes:{}},decorators:[a=>e.jsx("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",width:"100%",padding:"1rem",backgroundColor:"var(--blue-8)",borderRadius:"var(--radius-md)"},children:e.jsx("div",{style:{width:"5rem"},children:e.jsx(a,{})})})]},o={render:a=>e.jsx(s,{...a})},r={render:()=>e.jsxs("div",{style:{gap:"0.5rem",display:"flex",flexDirection:"column"},children:[e.jsx(s,{tokenId:"688b6af354ed77c0b006ff8d",onClick:()=>{}}),e.jsx(s,{tokenId:"688b6af354ed77c0b006ff8d",color:t.secondary,onClick:()=>{}})]})};var n,i,d;o.parameters={...o.parameters,docs:{...(n=o.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  render: args => <TokenID {...args} />
+}`,...(d=(i=o.parameters)==null?void 0:i.docs)==null?void 0:d.source}}};var c,l,m;r.parameters={...r.parameters,docs:{...(c=r.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  render: () => <div style={{
+    gap: '0.5rem',
+    display: 'flex',
+    flexDirection: 'column'
+  }}>
+      <TokenID tokenId="688b6af354ed77c0b006ff8d" onClick={() => {}} />
+      <TokenID tokenId="688b6af354ed77c0b006ff8d" color={UIColor.secondary} onClick={() => {}} />
+    </div>
+}`,...(m=(l=r.parameters)==null?void 0:l.docs)==null?void 0:m.source}}};const I=["Default","AllVariants"];export{r as AllVariants,o as Default,I as __namedExportsOrder,x as default};

@@ -1,0 +1,1 @@
+import{r as o}from"./index-BKyFwriW.js";const a=t=>o.createElement("svg",{"data-icon":"IconMonoCaretDown",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 12 7",...t},o.createElement("path",{d:"M5.293 6.293.707 1.707C.077 1.077.523 0 1.414 0h9.172c.89 0 1.337 1.077.707 1.707L6.707 6.293a1 1 0 0 1-1.414 0Z"}));export{a as S};

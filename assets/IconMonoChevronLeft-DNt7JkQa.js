@@ -1,0 +1,1 @@
+import{r as o}from"./index-BKyFwriW.js";const n=e=>o.createElement("svg",{"data-icon":"IconMonoChevronLeft",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 12 20",...e},o.createElement("path",{d:"M11.67 1.77 9.9 0 0 9.9l9.9 9.9 1.77-1.77L3.54 9.9l8.13-8.13Z"}));export{n as S};
